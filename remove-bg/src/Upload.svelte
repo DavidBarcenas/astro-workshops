@@ -4,6 +4,8 @@
 
   import { onMount } from "svelte";
 
+  const cloudinaryURL = import.meta.env.VITE_URL;
+
   onMount(() => {
     const dropzone = new Dropzone("#dropzone", {
       uploadMultiple: false,
@@ -12,9 +14,9 @@
     });
 
     dropzone.on("sending", (file, xhr, formData) => {
-      formData.append("upload_preset", "key");
+      formData.append("upload_preset", import.meta.env.VITE_NAME);
       formData.append("timestamp", Date.now() / 1000);
-      formData.append("api_key", "api_key");
+      formData.append("api_key", import.meta.env.VITE_API_KEY);
     });
 
     dropzone.on("success", (file, response) => {
@@ -28,7 +30,7 @@
 </script>
 
 <form
-  action="/target"
+  action={cloudinaryURL}
   id="dropzone"
   class="shadow-2xl border-dashed border-2 border-gray-300 rounded-lg aspect-video w-full flex items-center justify-center"
 >

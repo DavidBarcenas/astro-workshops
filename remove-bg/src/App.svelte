@@ -1,6 +1,6 @@
 <script lang="ts">
   import CloudinaryLogo from "./cloudinary-logo.svelte";
-  import Upload from "./Upload.svelte";
+  import Upload from "./upload.svelte";
 </script>
 
 <div class="max-w-xl m-auto grid w-full h-screen p-4">
