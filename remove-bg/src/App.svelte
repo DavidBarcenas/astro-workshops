@@ -1,5 +1,8 @@
 <script lang="ts">
+  import { ImageStatus } from "../types.d";
   import CloudinaryLogo from "./cloudinary-logo.svelte";
+  import Edit from "./edit.svelte";
+  import { imageStatus } from "./store";
   import Upload from "./upload.svelte";
 </script>
 
@@ -11,7 +14,11 @@
   </header>
 
   <main>
-    <Upload />
+    {#if $imageStatus === ImageStatus.READY || $imageStatus === ImageStatus.UPLOADING}
+      <Upload />
+    {:else if $imageStatus === ImageStatus.DONE}
+      <Edit />
+    {/if}
   </main>
 
   <footer class="flex justify-center items-center gap-x-2 font-semibold pt-10">
