@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@cloudinary/url-gen': 1.9.1
   '@sveltejs/vite-plugin-svelte': ^2.0.2
   '@tsconfig/svelte': ^3.0.0
   autoprefixer: ^10.4.7
@@ -17,6 +18,7 @@ specifiers:
   vite: ^4.1.0
 
 dependencies:
+  '@cloudinary/url-gen': 1.9.1
   dropzone: 6.0.0-beta.2
   two-up-element: 1.0.1
 
@@ -35,6 +37,18 @@ devDependencies:
   vite: 4.1.4
 
 packages:
+
+  /@cloudinary/transformation-builder-sdk/1.2.6:
+    resolution: {integrity: sha512-+ae+01Z+g5DprnjP502jqc9iInRHGUEXl0eUQfHjbLI+lJ76TTP5yNqgrnMocy///z1LS/qh4lrOC8DQdKwsNA==}
+    dependencies:
+      '@cloudinary/url-gen': 1.9.1
+    dev: false
+
+  /@cloudinary/url-gen/1.9.1:
+    resolution: {integrity: sha512-P1zgWug/dMieYoA/XxYQloPCLsvm2QWG5AZoMtMqwBFKPljSlLS7o4fFCO5coCt0nv3KKTiygRMSiwKSL/XuLA==}
+    dependencies:
+      '@cloudinary/transformation-builder-sdk': 1.2.6
+    dev: false
 
   /@esbuild/android-arm/0.16.17:
     resolution: {integrity: sha512-N9x1CMXVhtWEAMS7pNNONyA14f71VPQN9Cnavj1XQh6T7bskqiLLrSca4O0Vr8Wdcga943eThxnVp3JLnBMYtw==}

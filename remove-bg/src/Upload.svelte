@@ -1,12 +1,23 @@
 <script lang="ts">
+  import { Cloudinary } from "@cloudinary/url-gen";
+  import { backgroundRemoval } from "@cloudinary/url-gen/actions/effect";
   import Dropzone from "dropzone";
   import "dropzone/dist/dropzone.css";
 
   import { onMount } from "svelte";
   import { ImageStatus } from "../types.d";
-  import { imageStatus, originalImage } from "./store";
+  import { imageStatus, modifiedImage, originalImage } from "./store";
 
   const cloudinaryURL = import.meta.env.VITE_URL;
+
+  const cloudinary = new Cloudinary({
+    cloud: {
+      cloudName: import.meta.env.VITE_CLOUD_NAME,
+    },
+    url: {
+      secure: true,
+    },
+  });
 
   onMount(() => {
     const dropzone = new Dropzone("#dropzone", {
@@ -23,9 +34,14 @@
     });
 
     dropzone.on("success", (file, response) => {
+      const { secure_url, public_id } = response;
+
+      const imageWithoutBg = cloudinary.image(public_id).effect(backgroundRemoval());
+
       imageStatus.set(ImageStatus.DONE);
-      const { secure_url } = response;
       originalImage.set(secure_url);
+      modifiedImage.set(imageWithoutBg.toURL());
+      console.log(imageWithoutBg.toURL());
       console.log(response);
     });
 
