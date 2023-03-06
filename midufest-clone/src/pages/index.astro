@@ -1,15 +1,26 @@
 ---
+import HyperDrive from "../components/hyper-drive.astro";
+import Logo from "../components/logo.astro";
+import Starfield from "../components/starfield.astro";
+import Layout from "../layouts/layout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <h1>Astro</h1>
-  </body>
-</html>
+<Layout title="midufest-clone">
+  <div class="absolute top-0 bottom-0 w-full">
+    <Starfield noGradient />
+    <HyperDrive class="z-0 w-full h-full" />
+  </div>
+  <main class="grid place-content-center w-screen h-screen">
+    <section class="flex items-center flex-col gap-y-8">
+      <div>
+        <Logo />
+      </div>
+      <div class="-skew-y-6 text-center">
+        <h2 class="italic font-bold text-4xl text-white">22 de marzo</h2>
+        <h3 class="italic text-white/80 font-bold">
+          17:00 horas GMT+1 · Streaming en twitch.tv/midudev
+        </h3>
+      </div>
+    </section>
+  </main>
+</Layout>
