@@ -1,5 +1,6 @@
 ---
 import HyperDrive from "../components/hyper-drive.astro";
+import Link from "../components/link.astro";
 import Logo from "../components/logo.astro";
 import Starfield from "../components/starfield.astro";
 import Layout from "../layouts/layout.astro";
@@ -12,15 +13,33 @@ import Layout from "../layouts/layout.astro";
   </div>
   <main class="grid place-content-center w-screen h-screen">
     <section class="flex items-center flex-col gap-y-8">
-      <div>
+      <header>
         <Logo />
-      </div>
-      <div class="-rotate-[10deg] text-center">
-        <h2 class="italic font-extrabold text-4xl text-white">22 de marzo</h2>
-        <h3 class="italic text-white/80 text-lg">
-          17:00 horas GMT+1 · Streaming en twitch.tv/midudev
+      </header>
+      <footer class="animate-fadeIn animate-delay-500 text-center m-auto">
+        <h2 class="italic font-extrabold text-4xl -rotate-[10deg] text-white">
+          22 de marzo
+        </h2>
+        <h3 class="italic text-white/80 text-lg -rotate-[10deg]">
+          17:00 horas GMT+1 · Streaming en <a
+            class="italic text-purple-400 hover:underline -rotate-[10deg]"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://twitch.tv/midudev"
+          >
+            twitch.tv/midudev</a
+          >
         </h3>
-      </div>
+        <div class="flex gap-x-8 mt-4 justify-center -rotate-[10deg]">
+          <Link className="italic" href="#" title="Enviar charla" isExternal />
+          <Link
+            className="italic"
+            href="#"
+            title="Quiero ser sponsor"
+            isExternal
+          />
+        </div>
+      </footer>
     </section>
   </main>
 </Layout>

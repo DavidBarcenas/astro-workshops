@@ -5,6 +5,7 @@ specifiers:
   '@fontsource/montserrat': ^4.5.14
   '@typescript-eslint/eslint-plugin': ^5.54.1
   '@typescript-eslint/parser': ^5.54.1
+  animated-tailwindcss: ^4.0.0
   astro: ^2.0.18
   eslint: ^8.35.0
   eslint-plugin-astro: ^0.23.0
@@ -15,6 +16,7 @@ specifiers:
 dependencies:
   '@astrojs/tailwind': 3.0.1_ztwm5qe42rkouqcscc322ujlja
   '@fontsource/montserrat': 4.5.14
+  animated-tailwindcss: 4.0.0_tailwindcss@3.2.7
   astro: 2.0.18
   tailwindcss: 3.2.7
 
@@ -966,6 +968,18 @@ packages:
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
     dev: true
+
+  /animated-tailwindcss/4.0.0_tailwindcss@3.2.7:
+    resolution: {integrity: sha512-sJquGVOQkdRuEJiDKX/bjjuXgGTpXBiNKiYD3ef+hoNdpWnjDrOVInOHB9QJC/Q7Ir5Ae+KEAg/ZW/ZBS6KcSw==}
+    peerDependencies:
+      postcss: ^8
+      tailwindcss: ^3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
+    dependencies:
+      tailwindcss: 3.2.7
+    dev: false
 
   /ansi-align/3.0.1:
     resolution: {integrity: sha512-IOfwwBF5iczOjp/WeY4YxyjqAFMQoZufdQWDd19SEExbVLNXqvpzSJ/M7Za4/sCPmQ0+GRquoA7bGcINcxew6w==}

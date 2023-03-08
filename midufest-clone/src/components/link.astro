@@ -1,0 +1,35 @@
+---
+const { className, href, external, title } = Astro.props;
+const anchorProps = external ? { target: "_blank", rel: "noopener" } : {};
+---
+
+<a
+  class={`${className} relative font-extrabold text-xl transition text-primary hover:text-white`}
+  href={href}
+  {...anchorProps}
+>
+  {title}
+</a>
+
+<style>
+  a::before,
+  a::after {
+    font-weight: 400;
+    position: absolute;
+    color: #ffd200;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  a::before {
+    left: -10px;
+    content: "{";
+  }
+  a::after {
+    right: -10px;
+    content: "}";
+  }
+  a:hover::before,
+  a:hover::after {
+    opacity: 1;
+  }
+</style>
