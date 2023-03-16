@@ -8,9 +8,16 @@ module.exports = withAnimations({
     extend: {
       colors: {
         primary: "#FFD200",
+        gray: "rgba(17, 17, 17, 0.5)",
       },
       sans: {
         fontFamily: ["Montserrat", ...defaultTheme.fontFamily.sans],
+      },
+      screens: {
+        mobile: "411px",
+        medium: "468px",
+        tablet: "721px",
+        laptop: "890px",
       },
     },
   },
