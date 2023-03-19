@@ -12,7 +12,9 @@ const { title, date, tags } = Astro.props;
   class="animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-[length:400%_400%] p-0.5 shadow-xl transition [animation-duration:_6s] hover:shadow-sm"
 >
   <div class="rounded-[10px] bg-white p-4 !pt-20 sm:p-6">
-    <time datetime="2022-10-10" class="block text-xs text-gray-500">{date}</time>
+    <time datetime="2022-10-10" class="block text-xs text-gray-500">
+      {date}
+    </time>
 
     <a href="#">
       <h3 class="mt-0.5 text-lg font-medium text-gray-900">
