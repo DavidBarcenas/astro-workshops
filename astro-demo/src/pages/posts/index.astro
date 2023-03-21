@@ -1,0 +1,46 @@
+---
+import Header from '../../components/header.astro';
+import Card from '../../components/card.astro';
+import Hero from '../../components/hero.astro';
+import Layout from '../../layouts/layout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+console.log('[POSTS]: ', posts);
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <Header title="Bienvenido a Astro" />
+    <Hero />
+    <ul role="list" class="link-card-grid">
+      {
+        posts.map((post) => (
+          <Card
+            tags={post.data.tags}
+            date={post.data.pubDate}
+            title={post.data.title}
+            slug={post.slug}
+          />
+        ))
+      }
+    </ul>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1.5rem;
+    max-width: 60ch;
+  }
+
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 1rem;
+    padding: 0;
+  }
+</style>
