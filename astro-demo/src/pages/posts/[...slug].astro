@@ -1,5 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
+import Footer from '../../components/footer.vue';
+import { Header } from '../../components/header';
 import Base from '../../layouts/base.astro';
 
 export async function getStaticPaths() {
@@ -15,5 +17,7 @@ const { Content } = await post.render();
 ---
 
 <Base title={post.data.title}>
+  <Header title="Astro Demo" />
   <Content />
+  <Footer />
 </Base>
