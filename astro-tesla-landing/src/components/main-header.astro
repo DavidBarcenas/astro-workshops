@@ -3,12 +3,13 @@ import Logo from "./logo.astro";
 ---
 
 <header
+  id="main-header"
   class="flex items-center justify-between fixed top-0 w-full py-4 px-10 z-10 text-white"
 >
   <div class="flex flex-grow basis-0"><Logo /></div>
   <nav>
     <ul
-      class="flex text-sm font-medium [&>li>a]:inline-block [&>li>a]:py-2 [&>li>a]:px-4"
+      class="flex text-sm font-medium [&>li>a]:transition-colors [&>li>a]:duration-300 [&>li>a]:inline-block [&>li>a]:py-2 [&>li>a]:px-4"
     >
       <li><a href="#">Model S</a></li>
       <li><a href="#">Model 3</a></li>
@@ -20,7 +21,7 @@ import Logo from "./logo.astro";
   </nav>
   <nav class="flex flex-grow justify-end basis-0">
     <ul
-      class="flex text-sm font-medium [&>li>a]:inline-block [&>li>a]:py-2 [&>li>a]:px-4"
+      class="flex text-sm font-medium [&>li>a]:transition-colors [&>li>a]:duration-300 [&>li>a]:inline-block [&>li>a]:py-2 [&>li>a]:px-4"
     >
       <li><a href="#">Tienda</a></li>
       <li><a href="#">Cuenta</a></li>
@@ -28,3 +29,24 @@ import Logo from "./logo.astro";
     </ul>
   </nav>
 </header>
+
+<script>
+  const $header = document.getElementById("main-header");
+  const observerOpts: IntersectionObserverInit | undefined = {
+    root: undefined,
+    rootMargin: "0px",
+    threshold: 0.9,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const { isIntersecting } = entry;
+      if (isIntersecting) {
+        $header.style.color = entry.target.getAttribute("data-header-color");
+      }
+    });
+  }, observerOpts);
+
+  const $sections = document.querySelectorAll(".landing-sections");
+  $sections.forEach((section) => observer.observe(section));
+</script>
