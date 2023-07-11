@@ -1,23 +1,30 @@
 ---
 import Logo from "./logo.astro";
 ---
-<header class="flex items-center justify-between fixed top-0 w-full py-4 px-10 z-10 text-white">
-    <div class="flex flex-grow basis-0"><Logo /></div>
-    <nav>
-        <ul class="flex text-sm font-medium [&>li>a]:inline-block [&>li>a]:py-2 [&>li>a]:px-4">
-            <li><a href="#">Model S</a></li>
-            <li><a href="#">Model 3</a></li>
-            <li><a href="#">Model X</a></li>
-            <li><a href="#">Model Y</a></li>
-            <li><a href="#">Cybertruck</a></li>
-            <li><a href="#">Powerwall</a></li>
-        </ul>
-    </nav>
-    <nav class="flex flex-grow justify-end basis-0">
-        <ul class="flex text-sm font-medium [&>li>a]:inline-block [&>li>a]:py-2 [&>li>a]:px-4">
-            <li><a href="#">Tienda</a></li>
-            <li><a href="#">Cuenta</a></li>
-            <li><a href="#">Menú</a></li>
-        </ul>
-    </nav>
+
+<header
+  class="flex items-center justify-between fixed top-0 w-full py-4 px-10 z-10 text-white"
+>
+  <div class="flex flex-grow basis-0"><Logo /></div>
+  <nav>
+    <ul
+      class="flex text-sm font-medium [&>li>a]:inline-block [&>li>a]:py-2 [&>li>a]:px-4"
+    >
+      <li><a href="#">Model S</a></li>
+      <li><a href="#">Model 3</a></li>
+      <li><a href="#">Model X</a></li>
+      <li><a href="#">Model Y</a></li>
+      <li><a href="#">Cybertruck</a></li>
+      <li><a href="#">Powerwall</a></li>
+    </ul>
+  </nav>
+  <nav class="flex flex-grow justify-end basis-0">
+    <ul
+      class="flex text-sm font-medium [&>li>a]:inline-block [&>li>a]:py-2 [&>li>a]:px-4"
+    >
+      <li><a href="#">Tienda</a></li>
+      <li><a href="#">Cuenta</a></li>
+      <li><a href="#">Menú</a></li>
+    </ul>
+  </nav>
 </header>

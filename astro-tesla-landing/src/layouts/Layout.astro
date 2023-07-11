@@ -1,6 +1,6 @@
 ---
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -8,60 +8,60 @@ const { title } = Astro.props;
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 <style is:global>
-	@font-face {
-		font-family: 'Gotham';
-		src: url('/fonts/GothamLight.woff2') format('woff2');
-		font-weight: 300;
-		font-style: normal;
-		font-display: swap;
-		ascent-override: 70%;
-	}
-	@font-face {
-		font-family: 'Gotham';
-		src: url('/fonts/GothamBook.woff2') format('woff2');
-		font-weight: normal;
-		font-style: normal;
-		ascent-override: 70%;
-	}
-	@font-face {
-		font-family: 'Gotham';
-		src: url('/fonts/GothamMedium.woff2') format('woff2');
-		font-weight: 500;
-		font-style: normal;
-		font-display: swap;
-		ascent-override: 70%;
-	}
-	@font-face {
-		font-family: 'Gotham';
-		src: url('/fonts/GothamMedium_1.woff2') format('woff2');
-		font-weight: 600;
-		font-style: normal;
-		font-display: swap;
-		ascent-override: 70%;
-	}
-	@font-face {
-		font-family: 'Gotham';
-		src: url('/fonts/GothamBold.woff2') format('woff2');
-		font-weight: bold;
-		font-style: normal;
-		font-display: swap;
-		ascent-override: 70%;
-	}
-	html {
-		font-family: 'Gotham', system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
+  @font-face {
+    font-family: "Gotham";
+    src: url("/fonts/GothamLight.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    ascent-override: 70%;
+  }
+  @font-face {
+    font-family: "Gotham";
+    src: url("/fonts/GothamBook.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    ascent-override: 70%;
+  }
+  @font-face {
+    font-family: "Gotham";
+    src: url("/fonts/GothamMedium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    ascent-override: 70%;
+  }
+  @font-face {
+    font-family: "Gotham";
+    src: url("/fonts/GothamMedium_1.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    ascent-override: 70%;
+  }
+  @font-face {
+    font-family: "Gotham";
+    src: url("/fonts/GothamBold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+    ascent-override: 70%;
+  }
+  html {
+    font-family: "Gotham", system-ui, sans-serif;
+    background-color: #f6f6f6;
+  }
 </style>
