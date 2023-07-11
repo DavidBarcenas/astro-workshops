@@ -2,14 +2,17 @@
 import Layout from "../layouts/Layout.astro";
 import MainHeader from "../components/main-header.astro";
 import HeroSection from "../components/hero-section.astro";
+import ModelY from "../components/model-y.astro";
 ---
 
 <Layout title="TESLA">
-  <main>
-    <MainHeader />
-    <HeroSection />
-    <HeroSection />
-    <HeroSection />
-    <HeroSection />
+  <MainHeader />
+  <main
+    class="w-full h-screen overflow-auto snap-y snap-mandatory scroll-smooth"
+  >
+    <HeroSection className="snap-center" />
+    <ModelY className="snap-center" />
+    <HeroSection className="snap-center" />
+    <HeroSection className="snap-center" />
   </main>
 </Layout>

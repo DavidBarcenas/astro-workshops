@@ -1,5 +1,13 @@
+---
+interface Props {
+  className?: string;
+}
+
+const { className } = Astro.props;
+---
+
 <section
-  class="h-screen w-screen text-center relative overflow-hidden bg-black"
+  class=`h-screen w-screen text-center relative overflow-hidden bg-black ${className}`
 >
   <div class="absolute top-0 left-0 bottom-0 right-0">
     <video
