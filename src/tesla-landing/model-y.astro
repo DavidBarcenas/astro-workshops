@@ -3,11 +3,15 @@
   data-header-color="black"
 >
   <div class="absolute top-0 left-0 bottom-0 right-0">
-    <img
-      src="/images/model-y.avif"
-      alt="Model Y"
-      class="object-cover h-full w-full"
-    />
+    <picture>
+      <source srcset="/images/model-y.avif" type="avif" />
+      <source srcset="/images/model-y.webp" type="webp" />
+      <img
+        src="/images/model-y.avif"
+        alt="Model Y"
+        class="object-cover h-full w-full"
+      />
+    </picture>
   </div>
   <header class="text-black relative">
     <h2 class="pt-28 text-[40px] font-medium">Model Y</h2>
