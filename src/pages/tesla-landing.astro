@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/Layout.astro";
+import MainHeader from "../components/main-header.astro";
+import ModelY from "../components/model-y.astro";
+import HeroSection from "../components/hero-section.astro";
+---
+<Layout title="Astro WorkShops">
+    <MainHeader />
+    <main class="w-full h-screen overflow-auto snap-y snap-mandatory scroll-smooth">
+        <HeroSection className="snap-center" />
+        <ModelY className="snap-center" />
+        <HeroSection className="snap-center" />
+        <HeroSection className="snap-center" />
+    </main>
+</Layout>
