@@ -1,8 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import MainHeader from "../tesla-landing/landing-header.astro";
-import ModelY from "../tesla-landing/model-y.astro";
-import HeroSection from "../tesla-landing/landing-section.astro";
+import LandingSection from "../tesla-landing/landing-section.astro";
+import LandingBtn from "../tesla-landing/landing-btn.astro";
 ---
 
 <Layout title="Astro WorkShops">
@@ -10,6 +10,20 @@ import HeroSection from "../tesla-landing/landing-section.astro";
   <main
     class="w-full h-screen overflow-auto snap-y snap-mandatory scroll-smooth"
   >
-    <HeroSection className="snap-center" />
+    <LandingSection
+      title="Vive la experiencia Tesla"
+      subtitle="Agenda una demostración de manejo hoy"
+      color="white"
+    >
+      <video
+        slot="background"
+        src="/video.webm"
+        autoplay
+        muted
+        loop
+      >
+      </video>
+      <LandingBtn slot="footer" text="Demostración de manejo" />
+    </LandingSection>
   </main>
 </Layout>
