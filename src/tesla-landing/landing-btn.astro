@@ -1,0 +1,15 @@
+---
+interface Props {
+  text: string;
+  type: "outline" | "fill";
+}
+
+const { text, type } = Astro.props;
+---
+
+<a
+  href="#"
+  class="border-2 border-white inline-block text-sm font-medium px-9 rounded transition-all py-2 hover:bg-white hover:text-black"
+>
+  {text}
+</a>
