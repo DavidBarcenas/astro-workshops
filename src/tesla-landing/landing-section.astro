@@ -6,12 +6,12 @@ interface Props {
   sectionId: string;
 }
 
-const { color = 'black', title, subtitle, sectionId } = Astro.props;
-const textColor = `text-${color}`
+const { color = "black", title, subtitle, sectionId } = Astro.props;
+const textColor = `text-${color}`;
 ---
 
 <section
-  class='h-screen w-screen text-center relative overflow-hidden bg-black landing-sections snap-always snap-center'
+  class="h-screen w-screen text-center relative overflow-hidden bg-black landing-sections snap-always snap-center"
   data-header-color={color}
   id={sectionId}
 >
