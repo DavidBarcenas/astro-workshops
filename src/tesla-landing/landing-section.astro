@@ -6,7 +6,8 @@ interface Props {
   sectionId: string;
 }
 
-const { color, title, subtitle, sectionId } = Astro.props;
+const { color = 'black', title, subtitle, sectionId } = Astro.props;
+const textColor = `text-${color}`
 ---
 
 <section
@@ -15,13 +16,13 @@ const { color, title, subtitle, sectionId } = Astro.props;
   id={sectionId}
 >
   <div class="absolute top-0 left-0 bottom-0 right-0">
-    <slot name="background" class="object-cover h-full w-full" />
+    <slot name="background" />
   </div>
-  <header class="text-white relative">
-    <h2 class="pt-28 text-[40px] font-medium">{title}</h2>
+  <header class={`relative ${textColor}`}>
+    <h2 class="pt-28 text-[40px] font-medium mb-1">{title}</h2>
     <p class="text-sm">{subtitle}</p>
   </header>
-  <footer class="absolute text-center w-full bottom-20 text-white">
+  <footer class={`absolute text-center w-full bottom-20 ${textColor}`}>
     <slot name="footer" />
   </footer>
 </section>
