@@ -3,17 +3,17 @@ interface Props {
   color: string;
   title: string;
   subtitle: string;
-  sectionId: string;
+  id: string;
 }
 
-const { color = "black", title, subtitle, sectionId } = Astro.props;
+const { color = "black", title, subtitle, id } = Astro.props;
 const textColor = `text-${color}`;
 ---
 
 <section
   class="h-screen w-screen text-center relative overflow-hidden bg-black landing-sections snap-always snap-center"
   data-header-color={color}
-  id={sectionId}
+  id={id}
 >
   <div class="absolute top-0 left-0 bottom-0 right-0">
     <slot name="background" />
