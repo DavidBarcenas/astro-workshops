@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write 'src/**/*.{astro,js}'",
@@ -13,16 +13,20 @@
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^4.0.0",
-    "astro": "^2.8.0",
-    "tailwindcss": "^3.0.24"
+    "@astrojs/check": "^0.3.4",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.0.8",
+    "tailwindcss": "^3.4.0"
   },
   "devDependencies": {
-    "@typescript-eslint/parser": "^6.0.0",
-    "eslint": "^8.44.0",
-    "eslint-plugin-astro": "^0.27.2",
-    "install": "^0.13.0",
-    "prettier": "2.8.3",
-    "prettier-plugin-astro": "0.8.0"
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "eslint": "^8.56.0",
+    "eslint-config-standard-with-typescript": "^43.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "prettier": "^3.1.1",
+    "prettier-plugin-astro": "^0.12.3",
+    "typescript": "^5.3.3"
   }
 }

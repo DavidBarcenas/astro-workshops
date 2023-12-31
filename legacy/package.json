@@ -1,0 +1,28 @@
+{
+  "name": "astro-workshops",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "format": "prettier --write 'src/**/*.{astro,js}'",
+    "lint": "eslint 'src/**/*.{astro,js}'",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^4.0.0",
+    "astro": "^2.8.0",
+    "tailwindcss": "^3.0.24"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.44.0",
+    "eslint-plugin-astro": "^0.27.2",
+    "install": "^0.13.0",
+    "prettier": "2.8.3",
+    "prettier-plugin-astro": "0.8.0"
+  }
+}
