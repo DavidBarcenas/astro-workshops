@@ -1,0 +1,158 @@
+---
+import Layout from '../layouts/layout.astro';
+import TeslaHeader from '../components/tesla/tesla-header.astro';
+import TeslaSection from '../components/tesla/tesla-section.astro';
+import TeslaBtn from '../components/tesla/tesla-btn.astro';
+---
+<Layout title="Tesla Landing">
+    <TeslaHeader />
+    <main
+            class="w-full h-screen overflow-auto snap-y snap-mandatory scroll-smooth"
+    >
+        <TeslaSection
+                title="Vive la experiencia Tesla"
+                subtitle="Agenda una demostración de manejo hoy"
+                color="white"
+        >
+            <video
+                    slot="background"
+                    src="/images/tesla/video.webm"
+                    class="object-cover h-full w-full"
+                    autoplay
+                    muted
+                    loop></video>
+            <TeslaBtn slot="footer" text="Demostración de manejo" />
+        </TeslaSection>
+        <TeslaSection
+                title="Model S"
+                subtitle="Agenda una demostración de manejo hoy"
+                id="model-s"
+        >
+            <img
+                    slot="background"
+                    src="/images/tesla/model-s.webp"
+                    alt="Model S"
+                    class="object-cover h-full w-full"
+            />
+            <div class="flex justify-center gap-5" slot="footer">
+                <TeslaBtn text="Explora el inventario" mode="light" />
+                <TeslaBtn text="Orden personalizada" mode="dark" />
+            </div>
+        </TeslaSection>
+        <TeslaSection
+                title="Model 3"
+                subtitle="Agenda una demostración de manejo hoy"
+                id="model-3"
+        >
+            <img
+                    slot="background"
+                    src="/images/tesla/model-3.webp"
+                    alt="Model 3"
+                    class="object-cover h-full w-full"
+            />
+            <div class="flex justify-center gap-5" slot="footer">
+                <TeslaBtn text="Explora el inventario" mode="light" />
+                <TeslaBtn text="Orden personalizada" mode="dark" />
+            </div>
+        </TeslaSection>
+        <TeslaSection
+                title="Model X"
+                subtitle="Agenda una demostración de manejo hoy"
+                id="model-x"
+        >
+            <img
+                    slot="background"
+                    src="/images/tesla/model-x.webp"
+                    alt="Model X"
+                    class="object-cover h-full w-full"
+            />
+            <div class="flex justify-center gap-5" slot="footer">
+                <TeslaBtn text="Explora el inventario" mode="light" />
+                <TeslaBtn text="Orden personalizada" mode="dark" />
+            </div>
+        </TeslaSection>
+        <TeslaSection
+                title="Model Y"
+                subtitle="Agenda una demostración de manejo hoy"
+                id="model-y"
+        >
+            <img
+                    slot="background"
+                    src="/images/tesla/model-y.webp"
+                    alt="Model Y"
+                    class="object-cover h-full w-full"
+            />
+            <div class="flex justify-center gap-5" slot="footer">
+                <TeslaBtn text="Explora el inventario" mode="light" />
+                <TeslaBtn text="Orden personalizada" mode="dark" />
+            </div>
+        </TeslaSection>
+        <TeslaSection
+                title="Energía solar y Powerwall"
+                subtitle="Totalmente eléctrico"
+                id="cybertruck"
+        >
+            <img
+                    slot="background"
+                    src="/images/tesla/powerwall.webp"
+                    alt="Energía solar"
+                    class="object-cover h-full w-full"
+            />
+            <TeslaBtn slot="footer" text="Más información" />
+        </TeslaSection>
+        <TeslaSection title="Accesorios" subtitle="" id="powerwall">
+            <img
+                    slot="background"
+                    src="/images/tesla/accessories.webp"
+                    alt="Accesorios"
+                    class="object-cover h-full w-full"
+            />
+            <TeslaBtn slot="footer" text="Compra ahora" mode="dark" />
+        </TeslaSection>
+    </main>
+</Layout>
+<style>
+    @font-face {
+        font-family: "Gotham";
+        src: url("/fonts/GothamLight.woff2") format("woff2");
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+        ascent-override: 70%;
+    }
+    @font-face {
+        font-family: "Gotham";
+        src: url("/fonts/GothamBook.woff2") format("woff2");
+        font-weight: normal;
+        font-style: normal;
+        ascent-override: 70%;
+    }
+    @font-face {
+        font-family: "Gotham";
+        src: url("/fonts/GothamMedium.woff2") format("woff2");
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+        ascent-override: 70%;
+    }
+    @font-face {
+        font-family: "Gotham";
+        src: url("/fonts/GothamMedium_1.woff2") format("woff2");
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+        ascent-override: 70%;
+    }
+    @font-face {
+        font-family: "Gotham";
+        src: url("/fonts/GothamBold.woff2") format("woff2");
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+        ascent-override: 70%;
+    }
+    html {
+        font-family: "Gotham", system-ui, sans-serif;
+        background-color: #f6f6f6;
+    }
+</style>
