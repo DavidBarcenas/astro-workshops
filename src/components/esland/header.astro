@@ -1,0 +1,19 @@
+---
+import Logo from "./logo.astro";
+---
+
+<header id="header-nav" class="fixed top-0 w-full px-6 py-4 z-50 text-white">
+  <div class="max-w-7xl mx-auto flex items-center justify-between gap-16">
+    <Logo
+      class="absolute w-10 m-auto blur-sm opacity-0 transition-opacity duration-300 hover:opacity-100"
+    />
+    <Logo class="w-10" />
+    <nav
+      class="fixed w-full h-dvh inset-0 bg-[#151a36]/90 text-2xl flex flex-col items-center justify-center gap-8 -translate-y-full transition-transform duration-300 target:translate-y-0 md:static md:h-[initial] md:bg-[initial] md:text-xl md:flex-row md:translate-y-[initial]"
+    >
+      <a href="" class="text-white">Vota</a>
+      <a href="" class="text-white">Información</a>
+      <a href="" class="text-white">Archivo</a>
+    </nav>
+  </div>
+</header>
